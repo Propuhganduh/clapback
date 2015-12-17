@@ -5,7 +5,7 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
-      botRegex = /^\/xcool guy/;  botRegexRip = /^\/rip/; botRegexStop = /^\/stop/;
+      botRegex = /^\/cool guy/;  botRegexRip = /^\/rip/; botRegexStop = /^\/stop/;
       botRegexProp = /^\/prop/;botRegexKys = /^\/kys/; botRegexSC = /^\/SDL/i;
       botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexCh = /^\/cheese/;
       botRegexCMN = /^\/Chad McKnight nudes/; botRegexh2h = /^\/h2h/; botRegexDef = /^\/defense/
@@ -14,7 +14,7 @@ function respond() {
                 "MIA","BUF","SF","WAS","NYJ","TB"]
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
-    postMessage(cool());
+    postMessage("http://i.groupme.com/452x452.jpeg.5e5048b0ed5d46418955b26f4714ce56");
     this.res.end();
   } 
   else if(request.text && botRegexRip.test(request.text)) {
