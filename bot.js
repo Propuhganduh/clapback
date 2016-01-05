@@ -6,8 +6,8 @@ var botID = process.env.BOT_ID;
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/cool guy/;  botRegexRip = /^\/rip/; botRegexStop = /^\/stop/;
-      botRegexProp = /^\/prop/;botRegexKys = /^\/kys/; botRegexSC = /^\/SDL/i;
-      botRegexP = /^\/PDL/i;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexCh = /^\/cheese/;
+      botRegexProp = /^\/prop/;botRegexKys = /^\/kys/; botRegexSlam = /^\/slam/;
+      botRegexDaf = /^\/dafuq/;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexCh = /^\/cheese/;
       botRegexCMN = /^\/Chad McKnight nudes/; botRegexh2h = /^\/h2h/; botRegexDef = /^\/defense/
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
                 ,"BAL","SD","DEN","MIN","ATL","KC","NYG","GB","DET","HOU","STL","CHI","CAR",
@@ -35,6 +35,16 @@ function respond() {
   else if(request.text && botRegexKys.test(request.text)) {
     this.res.writeHead(200);
     postMessage("http://www.wikihow.com/Tie-a-Noose");
+    this.res.end();
+  } 
+    else if(request.text && botRegexSlam.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("https://pbs.twimg.com/profile_images/587294731471757313/ZpI5PfKq.jpg");
+    this.res.end();
+  } 
+    else if(request.text && botRegexDaf.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://i3.kym-cdn.com/photos/images/facebook/000/787/356/d6f.jpg");
     this.res.end();
   } 
   else {
