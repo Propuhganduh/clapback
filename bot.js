@@ -7,6 +7,7 @@ function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/cool guy/;  botRegexSlut = /^\/slut/; botRegexStop = /^\/stop/;
       botRegexProp = /^\/prop/;botRegexKys = /^\/kys/; botRegexSlam = /^\/slam/; botRegexBrye = /^\/brye/;
+      botRegexGian = /^\/gian/;
       botRegexDaf = /^\/dafuq/;  botRegexTw = /^\/twitch/i; botRegexSb = /^\/sub/; botRegexCh = /^\/cheese/;
       botRegexCMN = /^\/Chad McKnight nudes/; botRegexh2h = /^\/h2h/; botRegexDef = /^\/defense/
   var teamAb = ["NE","NO","ARI","PHI","CLE","TEN","OAK","DAL","IND","SEA","CIN","PIT","JAC"
@@ -50,6 +51,11 @@ function respond() {
     else if(request.text && botRegexBrye.test(request.text)) {
     this.res.writeHead(200);
     postMessage("https://i.groupme.com/600x490.jpeg.b31d5153fb474d9bb18dd51b3d650afe.large");
+    this.res.end();
+    } 
+    else if(request.text && botRegexGian.test(request.text)) {
+    this.res.writeHead(200);
+    postMessage("http://imgur.com/9V6ZnvD");
     this.res.end();
   } 
   else {
